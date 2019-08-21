@@ -56,7 +56,7 @@ class Student
     WHERE grade < 12
     SQL
     array = DB[:conn].execute(sql)
-    array
+    array.flatten(1)
     binding.pry
   end
 
