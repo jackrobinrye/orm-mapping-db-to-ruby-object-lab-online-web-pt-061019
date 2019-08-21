@@ -29,9 +29,9 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name).map |row|
-      self.new_from_db(row)
-    end
+    # DB[:conn].execute(sql, name).map |row|
+    #   self.new_from_db(row)
+    # end
   end
 
   def save
@@ -52,11 +52,11 @@ class Student
     )
     SQL
 
-    DB[:conn].execute(sql)
+    # DB[:conn].execute(sql)
   end
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
-    DB[:conn].execute(sql)
+    # DB[:conn].execute(sql)
   end
 end
