@@ -55,9 +55,8 @@ class Student
     FROM students
     WHERE grade < 12
     SQL
-    array = DB[:conn].execute(sql)
-    array.flatten(1)
-    binding.pry
+    array = DB[:conn].execute(sql).flatten(1)
+    array
   end
 
 
