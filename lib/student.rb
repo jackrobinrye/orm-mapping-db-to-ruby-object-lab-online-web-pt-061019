@@ -71,4 +71,5 @@ class Student
     FROM students
     WHERE grade = 9
     SQL
-    DB[:conn]
+    DB[:conn].execute(sql)
+  end 
